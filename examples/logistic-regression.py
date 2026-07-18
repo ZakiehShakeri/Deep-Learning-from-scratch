@@ -1,5 +1,16 @@
+import sys
 import numpy as np
 from matplotlib import pyplot as plt
+from pathlib import Path
+
+print(f"""
+This is an example usage of the module for training a logsitic
+You can use the library by adding the root path of the module to your
+`sys.path` like this:
+sys.path.insert(0, "{str(Path(__file__).parent.parent.resolve())}")
+""")
+
+sys.path.insert(0, str(Path(__file__).parent.parent.resolve()))
 
 # generating simple binary classification data
 np.random.seed(0)

@@ -1,5 +1,11 @@
 import numpy as np
-from linear import Linear
+import sys
+from pathlib import Path
+
+# ensure parent directory is on sys.path so we can import the nn package
+print(f"Current sys: {str(Path('..').resolve())}")
+sys.path.insert(0, str(Path(__file__).parent.parent.resolve()))
+from nn.linear import Linear
 
 def numerical_gradient(layer, input, grad_output, epsilon=1e-5):
     grad_W = np.zeros_like(layer.W)
