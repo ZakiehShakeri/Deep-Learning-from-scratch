@@ -1,6 +1,7 @@
 import numpy as np
+from .module import Module
 
-class ReLU:
+class ReLU(Module):
     def forward(self, input):
         self.input = input
         return np.maximum(0, input)
