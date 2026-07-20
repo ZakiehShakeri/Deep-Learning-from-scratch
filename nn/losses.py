@@ -38,3 +38,33 @@ class BinaryCrossEntropyLoss(Module):
         grad = -(self.y_true / self.y_pred) + ((1 - self.y_true) / (1 - self.y_pred))
         return grad / len(self.y_true)  # Average over all samples
 
+class MeanSquaredErrorLoss(Module):
+    def __init__(self):
+        self.y_true = None
+        self.y_pred = None
+
+    def forward(self, y_true, y_pred):
+        """
+        Compute the mean squared error loss.
+
+        Args:
+            y_true (np.ndarray): True labels.
+            y_pred (np.ndarray): Predicted values.
+
+        Returns:
+            float: The mean squared error loss.
+        """
+        self.y_true = y_true
+        self.y_pred = y_pred
+        loss = np.mean((self.y_true - self.y_pred) ** 2)
+        return loss
+
+    def backward(self):
+        """
+        Compute the gradient of the mean squared error loss with respect to the predictions.
+
+        Returns:
+            np.ndarray: The gradient of the loss with respect to the predictions.
+        """
+        grad = 2 * (self.y_pred - self.y_true) / len(self.y_true)  # Average over all samples
+        return grad
