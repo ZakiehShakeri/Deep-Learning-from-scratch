@@ -19,18 +19,19 @@ Current implementation:
 - ✅ Gradient Descent optimizer
 - ✅ Binary Cross-Entropy Loss
 - ✅ Gradient checking using finite differences
+- ✅ Linear Layer
+- ✅ ReLU
+- ✅ Sigmoid
+- ✅ Cross-Entropy Loss
+- ✅ SGD Optimizer
+- ✅ Sequential Model
+- ✅ Two-layer Neural Network
+- ✅ XOR Classification
+
+
 
 Planned:
-
-- ⏳ Linear Layer
-- ⏳ ReLU
-- ⏳ Sigmoid
 - ⏳ Softmax
-- ⏳ Cross-Entropy Loss
-- ⏳ SGD Optimizer
-- ⏳ Sequential Model
-- ⏳ Two-layer Neural Network
-- ⏳ XOR Classification
 - ⏳ MNIST Digit Classification
 - ⏳ Automatic Differentiation
 - ⏳ Transformer implementation
@@ -114,11 +115,11 @@ Examples include:
 - [x] Logistic Regression
 - [x] Gradient Checking
 - [x] Linear Layer
-- [ ] ReLU
-- [ ] Sigmoid
+- [x] ReLU
+- [x] Sigmoid
 - [ ] Softmax
-- [ ] Multi-layer Neural Networks
-- [ ] XOR
+- [x] Multi-layer Neural Networks
+- [x] XOR
 - [ ] MNIST
 - [ ] Automatic Differentiation
 - [ ] Transformer from Scratch
